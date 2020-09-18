@@ -12,6 +12,12 @@
 $ docker run --rm -it -v (pwd):/app shinyay/claat export <TARGET_MARKDOWN>
 ```
 
+#### Serve published HTML
+```
+$ cd <GENERATED_HTML_DIR>
+$ docker run --rm -it -v (pwd):/app -p 9090:9090 shinyay/claat serve -addr 0.0.0.0:9090
+```
+
 ## Features
 
 - feature:1
