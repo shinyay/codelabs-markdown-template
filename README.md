@@ -1,6 +1,7 @@
 # Google Codelab Format template by Markdown
 
 - [Tools for authoring and serving codelabs](https://github.com/googlecodelabs/tools)
+- [Codelab Formatting Guide](https://github.com/googlecodelabs/tools/blob/master/FORMAT-GUIDE.md)
 
 ## Description
 
