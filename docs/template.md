@@ -1,5 +1,5 @@
-summary: How to Write a Codelab
-id: how-to-write-a-codelab
+summary: Codelab Markdown Template
+id: codelab-markdown-template
 categories: Sample
 tags: tutorial
 status: Published 
@@ -60,7 +60,7 @@ Duration: 1
 [Youtube - Google Cloud Platform](https://www.youtube.com/c/googlecloudplatform/featured)
 
 ### Images
-![alt-text-here](https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png)
+![alt-text-here](images/sample.png)
 
 <!-- ------------------------ -->
 ## Other Stuff
