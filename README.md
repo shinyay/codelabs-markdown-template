@@ -26,6 +26,19 @@ $ docker run --rm -it -v (pwd):/app shinyay/claat export <TARGET_MARKDOWN>
 $ cd <GENERATED_HTML_DIR>
 $ docker run --rm -it -v (pwd):/app -p 9090:9090 shinyay/claat serve -addr 0.0.0.0:9090
 ```
+
+### Containerize Static Site
+Modify the following point in the Dockerfile ro specify directory
+
+```dockerfile
+COPY docs/codelab-markdown-template /usr/share/nginx/html
+```
+
+Build container image with **Cloud Build**
+```
+$ gcloud builds submit --tag us-central1-docker.pkg.dev/(gcloud config get-value project)/<REPO>/<IMAGE>:<TAG>
+```
+
 ## Installation
 
 ## Licence
