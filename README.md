@@ -44,7 +44,13 @@ $ gcloud builds submit --tag us-central1-docker.pkg.dev/(gcloud config get-value
 $ gcloud run deploy --image us-central1-docker.pkg.dev/(gcloud config get-value project)/<REPO>/<IMAGE>:<TAG> --platform managed
 ```
 
+### Deploy App on GKE
 
+### Deploy App on App Engine
+```
+$ gcloud app deploy
+$ gcloud app browse
+```
 
 ## Installation
 
