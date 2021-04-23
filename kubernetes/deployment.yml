@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: codelab
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: codelab
+  template:
+    metadata:
+      labels:
+        app: codelab
+    spec:
+      containers:
+      - name: codelab
+        image: us-central1-docker.pkg.dev/<PROJECT>/<REPO>/<IMAGE>:<TAG>
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: codelab-service
+spec:
+  selector:
+    app: codelab
+  type: LoadBalancer
+  ports:
+  - port: 80
+    targetPort: 8080
