@@ -39,6 +39,13 @@ Build container image with **Cloud Build**
 $ gcloud builds submit --tag us-central1-docker.pkg.dev/(gcloud config get-value project)/<REPO>/<IMAGE>:<TAG>
 ```
 
+### Deploy App on Cloud Run
+```
+$ gcloud run deploy --image us-central1-docker.pkg.dev/(gcloud config get-value project)/<REPO>/<IMAGE>:<TAG> --platform managed
+```
+
+
+
 ## Installation
 
 ## Licence
