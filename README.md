@@ -7,6 +7,15 @@
 
 ## Demo
 
+## Features
+
+- feature:1
+- feature:2
+
+## Requirement
+
+## Usage
+### Claat CLI
 #### Export HTML from Markdown
 ```
 $ docker run --rm -it -v (pwd):/app shinyay/claat export <TARGET_MARKDOWN>
@@ -17,16 +26,6 @@ $ docker run --rm -it -v (pwd):/app shinyay/claat export <TARGET_MARKDOWN>
 $ cd <GENERATED_HTML_DIR>
 $ docker run --rm -it -v (pwd):/app -p 9090:9090 shinyay/claat serve -addr 0.0.0.0:9090
 ```
-
-## Features
-
-- feature:1
-- feature:2
-
-## Requirement
-
-## Usage
-
 ## Installation
 
 ## Licence
