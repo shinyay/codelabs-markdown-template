@@ -48,8 +48,16 @@ $ gcloud run deploy --image us-central1-docker.pkg.dev/(gcloud config get-value 
 Create GKE Cluster
 ```
 $ gcloud container clusters create-auto shinyay-cluster-auto --region us-central1 --project (gcloud config get-value project)
+```
 
+Modify Image Info
+```yaml
+image: us-central1-docker.pkg.dev/<PROJECT>/<REPO>/<IMAGE>:<TAG>
+```
 
+Deploy App
+```
+$ kubectl apply -f kubernetes/deployment.yml
 ```
 
 ### Deploy App on App Engine
