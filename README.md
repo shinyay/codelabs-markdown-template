@@ -45,6 +45,12 @@ $ gcloud run deploy --image us-central1-docker.pkg.dev/(gcloud config get-value 
 ```
 
 ### Deploy App on GKE
+Create GKE Cluster
+```
+$ gcloud container clusters create-auto shinyay-cluster-auto --region us-central1 --project (gcloud config get-value project)
+
+
+```
 
 ### Deploy App on App Engine
 ```
