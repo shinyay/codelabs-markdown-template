@@ -2,6 +2,7 @@
 
 - [Tools for authoring and serving codelabs](https://github.com/googlecodelabs/tools)
 - [Codelab Formatting Guide](https://github.com/googlecodelabs/tools/blob/master/FORMAT-GUIDE.md)
+- [Codelab Site Template](https://github.com/shinyay/codelabs-getting-started)
 
 ## Description
 
