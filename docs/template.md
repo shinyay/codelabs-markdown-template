@@ -57,7 +57,8 @@ for (statement 1; statement 2; statement 3) {
 ## Hyperlinking and Embedded Images
 Duration: 1
 ### Hyperlinking
-[Youtube - Google Cloud Platform](https://www.youtube.com/c/googlecloudplatform/featured)
+- [Youtube - Google Cloud Platform](https://www.youtube.com/c/googlecloudplatform/featured)
+- [Download](https://github.com/shinyay/codelabs-markdown-template/releases/download/0.0.1/codelab-markdown-template-0.0.1.tar.gz)
 
 ### Images
 ![alt-text-here](images/sample.png)
