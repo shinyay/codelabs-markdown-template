@@ -1,10 +1,20 @@
-# Google Codelab Format template by Markdown
+# Codelab : Getting Started with Cloud Run and Spring Boot
 
-- [Tools for authoring and serving codelabs](https://github.com/googlecodelabs/tools)
-- [Codelab Formatting Guide](https://github.com/googlecodelabs/tools/blob/master/FORMAT-GUIDE.md)
-- [Codelab Site Template](https://github.com/shinyay/codelabs-getting-started)
+This is Codelabs tutorial.
 
 ## Description
+
+[Template Project: shinyay/codelabs-markdown-template](https://github.com/shinyay/codelabs-markdown-template)
+
+- [Lab Release: v1.0.0](https://github.com/users/shinyay/packages/container/package/codelab-spring-cloud-run-gs)
+  - `docker pull ghcr.io/shinyay/codelab-spring-cloud-run-gs:1.0.0`
+
+- [Tutorial Code: shinyay/codelab-spring-boot-rest-code](https://github.com/shinyay/codelab-spring-boot-rest-code)
+
+### Directories description
+- `docs` : Codelabs Markdown document
+- `tutorial` : Java Project for Tutorial
+- `nginx` : Configuration for Nginx
 
 ## Demo
 
@@ -16,36 +26,41 @@
 ## Requirement
 
 ## Usage
-### Claat CLI
-#### Export HTML from Markdown
+### 1. Codelabs site
+
+Convert Markdown to HTML
 ```
-$ docker run --rm -it -v (pwd):/app shinyay/claat export <TARGET_MARKDOWN>
+$ cd docs
+$ ./claat-export.fish -f *.md
 ```
 
-#### Serve published HTML
+Display Codelabs site
 ```
-$ cd <GENERATED_HTML_DIR>
-$ docker run --rm -it -v (pwd):/app -p 9090:9090 shinyay/claat serve -addr 0.0.0.0:9090
-```
-
-### Containerize Static Site
-Modify the following point in the Dockerfile ro specify directory
-
-```dockerfile
-COPY docs/codelab-markdown-template /usr/share/nginx/html
+$ ./claat-serve.fish
+$ open http://localhost:9090
 ```
 
-Build container image with **Cloud Build**
+### 2. Containerize site
+
+Docker build
 ```
-$ gcloud builds submit --tag us-central1-docker.pkg.dev/(gcloud config get-value project)/<REPO>/<IMAGE>:<TAG>
+$ cd <PROJECT ROOT>
+$ ./docker-build.fish -i/--image <IMAGE_NAME> -t/--tag <VERSION_TAG>
 ```
 
-### Deploy App on Cloud Run
+Display Codelabs site
+```
+$ docker run --rm -d -p 8080:8080 --name codelab <IMAGE_NAME><VERSION_TAG>
+$ open http://localhost:8080
+```
+
+### [OPTION] Build and Deploy with Google Cloud
+#### Deploy App on Cloud Run
 ```
 $ gcloud run deploy --image us-central1-docker.pkg.dev/(gcloud config get-value project)/<REPO>/<IMAGE>:<TAG> --platform managed
 ```
 
-### Deploy App on GKE
+#### Deploy App on GKE
 Create GKE Cluster
 ```
 $ gcloud container clusters create-auto shinyay-cluster-auto --region us-central1 --project (gcloud config get-value project)
@@ -61,13 +76,15 @@ Deploy App
 $ kubectl apply -f kubernetes/deployment.yml
 ```
 
-### Deploy App on App Engine
+#### Deploy App on App Engine
 ```
 $ gcloud app deploy
 $ gcloud app browse
 ```
 
 ## Installation
+
+## References
 
 ## Licence
 
