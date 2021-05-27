@@ -1,6 +1,8 @@
 FROM nginx:alpine
+ARG ID
 COPY nginx/default.conf /etc/nginx/conf.d/configfile.template
-COPY docs/codelab-markdown-template /usr/share/nginx/html
+COPY docs/$ID /usr/share/nginx/html
+COPY tutorial/tutorial.tar.gz /usr/share/nginx/html
 
 ENV PORT 8080
 ENV HOST 0.0.0.0
