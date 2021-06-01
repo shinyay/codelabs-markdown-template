@@ -13,9 +13,14 @@ Duration: 5
 
 ### 環境前提
 次のソフトウェアをインストールしてください:
+
+Positive
+: [Cloud Shell](https://shell.cloud.google.com/) の場合は、以下インストール不要です。
+
 - Java
 - Docker ([https://www.docker.com](https://www.docker.com))
 - Cloud SDK ([https://cloud.google.com/sdk](https://cloud.google.com/sdk))
+  - [インストール方法](https://cloud.google.com/sdk/docs/install)
 - IDE
   - IntelliJ IDEA
   - VS Code
